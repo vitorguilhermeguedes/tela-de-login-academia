@@ -2,80 +2,62 @@
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
-Este repositório contém o código-fonte para o **frontend** de uma aplicação de tela de login. A interface foi desenvolvida com React e Vite, focando em uma experiência de usuário limpa e funcional.
+Este repositório contém o código-fonte para o **frontend** de uma aplicação de tela de login, desenvolvida com React e Vite.
 
-Esta aplicação foi projetada para interagir com uma API de backend (desenvolvida separadamente em C#) para realizar a autenticação do usuário.
+## 🚀 Aplicação em Produção
 
-## 🖼️ Demonstração
+O site está no ar e pode ser acessado através do seguinte link:
 
-<img width="1366" height="610" alt="tela de login academia" src="https://github.com/user-attachments/assets/2f0ee04d-3372-4cef-a16e-2e722a8d9b89" />
+**[https://tela-de-login-academia.onrender.com/](https://tela-de-login-academia.onrender.com/)**
 
+## 🏛️ Arquitetura do Projeto
+
+Esta aplicação é dividida em duas partes: o frontend (este repositório) e o backend. O backend é responsável por toda a lógica de autenticação e validação.
+
+➡️ **[Repositório do Backend (GitHub)](https://github.com/vitorguilhermeguedes/tela-de-login-academia-backend)**
 
 ## ✨ Funcionalidades
 
--   Campos de entrada para email e senha com ícones.
--   Validação de campos obrigatórios.
--   Botão "Lembre-se de mim" e link para "Esqueceu a senha?".
--   Integração com API para autenticação de credenciais.
--   Feedback visual simples para o usuário após a tentativa de login.
--   Estrutura de componentes reutilizável.
-
-## 🚀 Tecnologias Utilizadas
-
--   **React:** Biblioteca para construção da interface de usuário.
--   **Vite:** Ferramenta de build para um desenvolvimento rápido e otimizado.
--   **JavaScript:** Linguagem de programação principal.
--   **CSS:** Para estilização dos componentes.
--   **react-icons:** Biblioteca para inclusão de ícones SVG.
-
-## ⚙️ Como Rodar o Projeto Localmente
-
-Para executar este projeto em sua máquina local, siga os passos abaixo.
-
-### Pré-requisitos
-
-Você vai precisar ter o [Node.js](https://nodejs.org/) (versão 18 ou superior) e o `npm` instalados.
-
-### Passos
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/](https://github.com/)[SEU-USUARIO-GITHUB]/[NOME-DO-REPOSITORIO].git
-    ```
-
-2.  **Navegue até a pasta do projeto:**
-    ```bash
-    cd [NOME-DO-REPOSITORIO]
-    ```
-
-3.  **Instale as dependências:**
-    ```bash
-    npm install
-    ```
-
-4.  **Execute a aplicação:**
-    ```bash
-    npm run dev
-    ```
-
-5.  Abra seu navegador e acesse `http://localhost:5173` (ou o endereço que aparecer no seu terminal).
+-   Interface de login limpa e responsiva.
+-   Campos de entrada para email e senha.
+-   Integração com uma API backend para autenticação de credenciais.
+-   Feedback visual para o usuário após a tentativa de login.
 
 ## 🔌 Conexão com o Backend
 
-Este projeto é apenas o **frontend** e não funcionará completamente sem sua contraparte, o **backend**.
+A URL da API é configurada através de uma **Variável de Ambiente** (`VITE_API_URL`) na plataforma de hospedagem (Render), permitindo que a aplicação se conecte ao backend correto sem expor a URL no código-fonte.
 
--   A lógica de autenticação (verificação de email e senha) é responsabilidade da API.
--   A chamada para a API é feita no arquivo `src/components/Login/Login.jsx`, na função `handleSubmit`.
--   Para que o login funcione, certifique-se de que o projeto do backend (a API em C#) esteja rodando localmente (geralmente em um endereço como `http://localhost:5001`).
+## 🛠️ Desenvolvimento Local
 
-## 👨‍💻 Autor
+Para executar este projeto em sua máquina local, siga os passos abaixo.
 
-Feito com ❤️ por **[Vitor Guedes]**.
+1.  **Pré-requisitos:**
+    * [Node.js](https://nodejs.org/) (versão 18 ou superior)
 
-Entre em contato:
+2.  **Passos:**
+    ```bash
+    # Clone o repositório
+    git clone [https://github.com/vitorguilhermeguedes/tela-de-login-academia.git](https://github.com/vitorguilhermeguedes/tela-de-login-academia.git)
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vitorguilhermeguedes/)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vitorguilhermeguedes)
+    # Navegue até a pasta do projeto
+    cd tela-de-login-academia
+
+    # Instale as dependências
+    npm install
+
+    # Execute a aplicação em modo de desenvolvimento
+    npm run dev
+    ```
+    *Lembre-se de que para o login funcionar localmente, você também precisará estar rodando o backend na sua máquina.*
+
+---
+
+## 👨‍💻 Criador
+
+Criado por **Vitor Guedes**.
+
+## 📄 Licença
+
+Este projeto está sob a licença [MIT](LICENSE).
