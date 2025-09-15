@@ -13,7 +13,7 @@
   color: #ffff;
 }
 
-.container .input-field {
+.input-field {
   position: relative;
   width: 100%;
   height: 50px;
@@ -45,7 +45,7 @@
   color: #fff;
 }
 
-.container .recall-forget {
+.recall-forget {
   display: flex;
   justify-content: space-between;
   font-size: 14.5px;
@@ -81,7 +81,7 @@
   text-shadow: none;
 }
 
-.container .signup-link {
+.signup-link {
   font-size: 14.5px;
   text-align: center;
   margin: 20px 0 15px;
@@ -97,23 +97,43 @@
   text-decoration: underline;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .container {
-    width: 90vw;
-    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
   }
 
   .container h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
-  .container .input-field {
-    margin: 20px auto;
+  .input-field {
+    margin: 25px auto;
   }
 
-  .container .recall-forget {
+  .recall-forget {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .recall-forget,
+  .signup-link {
+    font-size: 13px;
+  }
+
+  .recall-forget a {
+    text-align: left;
   }
 }
