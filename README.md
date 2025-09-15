@@ -12,6 +12,9 @@ O site está no ar e pode ser acessado através do seguinte link:
 
 **[https://tela-de-login-academia.onrender.com/](https://tela-de-login-academia.onrender.com/)**
 
+<img width="1366" height="610" alt="tela de login academia" src="https://github.com/user-attachments/assets/0e4241df-347b-41c1-8b9a-dc7a588e80d6" />
+
+
 ## 🏛️ Arquitetura do Projeto
 
 Esta aplicação é dividida em duas partes: o frontend (este repositório) e o backend. O backend é responsável por toda a lógica de autenticação e validação.
