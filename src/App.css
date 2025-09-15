@@ -1,10 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
   box-sizing: border-box;
-  text-shadow: #000 1px 1px;
-  font-family: Helvetica;
 }
 
 .App {
@@ -15,6 +12,7 @@
   background-image: url("./assets/academia.webp");
   background-size: cover;
   background-position: center;
+  font-family: Helvetica;
 }
 
 .container {
@@ -30,6 +28,7 @@
   text-align: center;
   font-size: 30px;
   color: #ffff;
+  text-shadow: #000 1px 1px;
 }
 
 .container .input-field {
@@ -49,11 +48,11 @@
   font-size: 16px;
   color: #fff;
   padding: 20px 45px 20px 25px;
+  font-weight: 700;
 }
 
 .input-field input::placeholder {
   color: #fff;
-  text-shadow: none;
 }
 
 .input-field .icon {
@@ -70,7 +69,6 @@
   justify-content: space-between;
   font-size: 14.5px;
   margin: 15px 0;
-  text-shadow: none;
 }
 
 .recall-forget label input {
@@ -99,14 +97,12 @@
   font-size: 16px;
   color: #333;
   font-weight: 700;
-  text-shadow: none;
 }
 
 .container .signup-link {
   font-size: 14.5px;
   text-align: center;
   margin: 20px 0 15px;
-  text-shadow: none;
 }
 
 .signup-link p a {
