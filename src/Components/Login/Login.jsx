@@ -7,24 +7,49 @@ const Login = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDeFault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    alert("Enviando dados:" + Username + " - " + Password);
+    const loginData = {
+      email: Username,
+      password: Password
+    };
+
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const response = await fetch(`${apiUrl}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(loginData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('Login realizado com sucesso: ' + data.message);
+      } else {
+        alert('Erro no login: ' + data.message);
+      }
+    } catch (error) {
+      console.error('Falha de conexão com o servidor:', error);
+      alert('Não foi possível conectar ao servidor. Verifique se o backend está no ar.');
+    }
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
 
-        <h1>Acesse o sistema </h1>
-        <div className="input-field">
+        <h1>Acesse o sistema</h1>
+        <div>
           <input type="email" placeholder="Email"
             required
             onChange={(e) => setUsername(e.target.value)} />
           <FaUser className="icon" />
         </div>
-        <div className="input-field">
+        <div>
           <input type="password" placeholder="Senha"
             onChange={(e) => setPassword(e.target.value)} />
           <FaLock className="icon" />
